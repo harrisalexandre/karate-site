@@ -1,6 +1,7 @@
 {
   "name": "karate-site",
   "version": "0.1.0",
+  "homepage": "https://harrisalexandre.github.io/karate-site/",
   "private": true,
   "dependencies": {
     "cra-template": "1.2.0",
@@ -12,6 +13,8 @@
     "web-vitals": "^4.2.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "server": "json-server --watch db.json --port 5000"
   },
