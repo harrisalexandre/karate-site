@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 
 function Register() {
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [name, setName] = useState('');
 
   const handleRegister = () => {
-    // Lógica de cadastro de usuário
-    console.log('Usuário cadastrado:', { name, email, password });
+    console.log({ name, email, password });
+    alert('Usuário registrado!');
   };
 
   return (
-    <div style={{ textAlign: 'center', padding: '20px' }}>
+    <div style={{ padding: '20px', textAlign: 'center' }}>
       <h1>Cadastro</h1>
       <input
         type="text"

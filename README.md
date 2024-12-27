@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# Karate Site - Projeto React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descrição
+Uma aplicação React interativa para gestão de eventos e usuários em um ambiente de Karatê. O projeto inclui:
+- Sistema de login e gerenciamento de usuários.
+- Calendário interativo para agendamento de eventos.
+- Suporte a banco de dados JSON para armazenamento local.
+- Configuração para publicação no GitHub Pages.
 
-## Available Scripts
+## Estrutura do Projeto
+```
+karate-site/
+├── node_modules/         # Dependências instaladas pelo npm
+├── public/               # Arquivos públicos (index.html, ícones, etc.)
+├── src/                  # Código fonte do aplicativo React
+│   ├── App.js            # Arquivo principal do React
+│   ├── index.js          # Entrada principal do React
+│   ├── pages/            # Páginas da aplicação
+│   │   ├── Home.js       # Página inicial
+│   │   ├── Login.js      # Tela de login
+│   │   ├── Register.js   # Tela de cadastro
+│   │   ├── Profile.js    # Tela de perfil
+│   │   ├── ForgotPassword.js # Tela de recuperação de senha
+│   │   ├── admin/        # Páginas administrativas
+│   │   │   └── UserList.js # Gerenciamento de usuários
+│   │   └── dashboard/    # Páginas do dashboard
+│   │       └── CalendarView.js # Calendário interativo
+├── db.json               # Banco de dados JSON para usuários e eventos
+├── package.json          # Configuração do npm
+├── package-lock.json     # Bloqueio de dependências
+├── README.md             # Documentação do projeto
+```
 
-In the project directory, you can run:
+## Configuração e Uso
 
-### `npm start`
+### Pré-requisitos
+Certifique-se de ter o Node.js instalado.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Instalação
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/harrisalexandre/karate-site.git
+   cd karate-site
+   ```
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Executando o Projeto
+1. Inicie o servidor JSON:
+   ```bash
+   npm run server
+   ```
+   O servidor estará disponível em `http://localhost:5000`.
 
-### `npm test`
+2. Inicie o React:
+   ```bash
+   npm start
+   ```
+   A aplicação estará disponível em `http://localhost:3000`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Publicando no GitHub Pages
+1. Configure o `homepage` no `package.json`:
+   ```json
+   "homepage": "https://harrisalexandre.github.io/karate-site"
+   ```
+2. Execute os comandos:
+   ```bash
+   npm run build
+   npm run deploy
+   ```
+3. Acesse sua aplicação em: [https://harrisalexandre.github.io/karate-site](https://harrisalexandre.github.io/karate-site).
 
-### `npm run build`
+## Funcionalidades
+- **Login:**
+  - Usuários: `admin@karate.com` (senha: `admin123`) e `user@karate.com` (senha: `user123`).
+- **Calendário:**
+  - Adicione eventos com título, criador, data de início e fim.
+- **Gerenciamento de Usuários:**
+  - Criação, edição e exibição de usuários diretamente na interface.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Contribuição
+Sinta-se à vontade para contribuir com melhorias ou abrir issues no repositório do GitHub.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Desenvolvido com 💪 e React! 🚀
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

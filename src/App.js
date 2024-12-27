@@ -2,12 +2,13 @@
 // Certifique-se de ter Node.js instalado e crie o app com: `npx create-react-app karate-site`
 
 // Instale dependências adicionais:
-// npm install react-router-dom axios styled-components firebase react-big-calendar moment json-server
+// npm install react-router-dom axios styled-components firebase react-big-calendar moment json-server gh-pages
 
 // Atualização das funcionalidades:
 // - Implementação de calendário interativo com react-big-calendar.
 // - Páginas dinamicamente melhoradas com imagens e interatividade.
 // - Suporte a banco de dados JSON para perfis e eventos.
+// - Configuração para publicação no GitHub Pages.
 
 // Arquivo: App.js
 import React from 'react';
@@ -23,7 +24,7 @@ import CalendarView from './pages/dashboard/CalendarView';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/karate-site">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />

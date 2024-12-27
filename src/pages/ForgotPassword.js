@@ -2,9 +2,9 @@ import React from 'react';
 
 function ForgotPassword() {
   return (
-    <div style={{ textAlign: 'center', padding: '20px' }}>
-      <h1>Esqueci a senha</h1>
-      <p>Função ainda não implementada.</p>
+    <div style={{ padding: '20px', textAlign: 'center' }}>
+      <h1>Esqueci a Senha</h1>
+      <p>Em breve você poderá recuperar sua senha.</p>
     </div>
   );
 }
